@@ -1,6 +1,5 @@
 <template>
   <div class="custom-container center-center">
-    kjashkjdshkasjdjhaskj
     <div class="text-center">
       <div class="search-section">
         <v-text-field
