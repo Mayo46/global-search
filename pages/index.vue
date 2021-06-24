@@ -14,19 +14,19 @@
         <div class="checkboxes">
           <v-checkbox
             v-model="addQuotation"
-            label="Add Double Quotation"
+            label='Add Double Quotation "..." '
             hide-details
             @change="quotation"
           ></v-checkbox>
           <v-checkbox
             v-model="addParenthesis"
-            label="Add Parenthesis"
+            label='Add Parenthesis (...)'
             hide-details
             @change="parenthesis"
           ></v-checkbox>
         </div>
       </div>
-      <div class="btn-section">
+      <div class="btn-section pt-6">
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Google')">Google</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
