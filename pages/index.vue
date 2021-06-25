@@ -26,7 +26,7 @@
           ></v-checkbox>
         </div>
       </div>
-      <div class="btn-section pt-6">
+      <div class="btn-section pt-10">
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Google')">Google</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
@@ -34,6 +34,7 @@
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
         <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="mb-2" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField()">Open All</v-btn>
@@ -41,7 +42,7 @@
           <span>“If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser”</span>
         </v-tooltip>
       </div>
-      <p class="pt-10">If You search using a domain name,try those
+      <p class="pt-10 pb-10 mb-0">If You search using a domain name,try those
         tools for more info about the domain
       </p>
       <div class="text-center">
@@ -111,6 +112,9 @@ export default {
       else if (data==='Youtube'){
         window.open('https://www.youtube.com/search/?q=' + this.search)
       }
+      else if (data==='socialmention'){
+        window.open('http://socialmention.com/search?q=' + this.search)
+      }
       else if (data==='Who'){
         window.open('https://who.is/whois/' + this.search)
       }
@@ -133,6 +137,7 @@ export default {
         window.open('https://www.facebook.com/search/?q=' + this.search)
         window.open('https://www.instagram.com/search/?q=' + this.search)
         window.open('https://www.youtube.com/search/?q=' + this.search)
+        window.open('http://socialmention.com/search?q=' + this.search)
       }
 
     },
@@ -142,8 +147,8 @@ export default {
 <style scoped>
 .custom-container{
   max-width: 1140px;
-  margin:  10rem auto;
-  padding: 0 1rem;
+  margin: auto;
+  padding: 7rem 1rem;
 }
 .center-center {
   display: grid;

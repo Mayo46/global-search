@@ -7,14 +7,14 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - global-search',
-    title: 'global-search',
+    title: 'Opener: custom search engine | search across multiple sites',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Write the keyword once only and search multiple websites simultaneously. Search in popular websites like Google, Facebook, Twitter, Reddit, Qoura, and many others.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
