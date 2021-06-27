@@ -9,7 +9,6 @@
       :absolute="!fixed"
       app
       color="#262d3d"
-      height="65"
     >
       <span class="footer-title">Copyright © 2021 Opener</span>
       <v-spacer></v-spacer>
