@@ -7,7 +7,6 @@
           placeholder="Enter Search term"
           outlined
           color="black darken-2"
-          append-icon="mdi-help"
           class="search-field"
         >
         </v-text-field>
@@ -27,17 +26,26 @@
         </div>
       </div>
       <div class="btn-section pt-10">
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Google')">Google</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mb-2" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField()">Open All</v-btn>
+            <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField()"> Open All
+              <v-icon
+                left
+                dark
+                class="ml-1"
+              >
+                mdi-help
+              </v-icon>
+
+             </v-btn>
           </template>
           <span>“If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser”</span>
         </v-tooltip>
@@ -46,12 +54,20 @@
         tools for more info about the domain
       </p>
       <div class="text-center">
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Who')">who.js</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
-        <v-btn class="mr-2 mb-2" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">who.js</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
+        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mb-2" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField('Open_all')">Open All</v-btn>
+            <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField('Open_all')">Open All
+              <v-icon
+                left
+                dark
+                class="ml-1"
+              >
+                mdi-help
+              </v-icon>
+            </v-btn>
           </template>
           <span>“If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser”</span>
         </v-tooltip>
@@ -171,4 +187,7 @@ export default {
    margin-bottom: 0;
     display: none;
  }
+  .lower-case{
+    text-transform: capitalize;
+  }
 </style>
