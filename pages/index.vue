@@ -8,6 +8,7 @@
           outlined
           color="black darken-2"
           class="search-field"
+          clearable
         >
         </v-text-field>
         <div class="checkboxes">
