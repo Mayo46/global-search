@@ -38,41 +38,30 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField()"> Open All
-              <v-icon
-                left
-                dark
-                class="ml-1"
-              >
-                mdi-help
-              </v-icon>
-
+              <v-icon left dark class="ml-1">mdi-help</v-icon>
              </v-btn>
           </template>
           <span>“If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser”</span>
         </v-tooltip>
       </div>
-      <p class="pt-10 pb-10 mb-0">If You search using a domain name,try those
+      <p class="pt-10 pb-10 mb-0">If you search using a domain name,try those
         tools for more info about the domain
       </p>
-      <div class="text-center">
+      <div class="text-center pb-10">
         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">who.js</v-btn>
         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
         <v-tooltip bottom>
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField('Open_all')">Open All
-              <v-icon
-                left
-                dark
-                class="ml-1"
-              >
-                mdi-help
-              </v-icon>
+              <v-icon left dark class="ml-1">mdi-help</v-icon>
             </v-btn>
           </template>
           <span>“If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser”</span>
         </v-tooltip>
       </div>
+      <p class="text-gray">We don't store data. There are no ads, bloated dialogs, or useless checkboxes. We built this tool to use it ourselves.</p>
+      <p class="text-gray">  What other sites you'd like to see here? Let us know: Opener@inboxeen.com</p>
     </div>
   </div>
 </template>
@@ -165,7 +154,7 @@ export default {
 .custom-container{
   max-width: 1140px;
   margin: auto;
-  padding: 7rem 1rem;
+  padding: 4.3rem 1rem;
 }
 .center-center {
   display: grid;
@@ -190,5 +179,8 @@ export default {
  }
   .lower-case{
     text-transform: capitalize;
+  }
+  .text-gray{
+    color: gray;
   }
 </style>
