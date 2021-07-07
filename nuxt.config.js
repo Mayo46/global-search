@@ -7,14 +7,14 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - global-search',
-    title: 'Opener: custom search engine | search across multiple sites',
+    title: 'Resulttree | Multiple searches | Search multiple sites | Multiple search engine',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Write the keyword once only and search multiple websites simultaneously. Search in popular websites like Google, Facebook, Twitter, Reddit, Qoura, and many others.' }
+      { hid: 'description', name: 'description', content: 'Search multiple websites at once. Resulttree helps you to save time and effort! Type the keyword once and search multiple search engines. Search in Google, Facebook, Twitter, Reddit, and many others at once.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

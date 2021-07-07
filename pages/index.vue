@@ -1,70 +1,85 @@
 <template>
-  <div class="custom-container center-center">
-    <div class="text-center">
-      <div class="search-section">
-        <v-text-field
-          v-model="search"
-          placeholder="Enter Search term"
-          outlined
-          color="black darken-2"
-          class="search-field"
-          clearable
-        >
-        </v-text-field>
-        <div class="checkboxes">
-          <v-checkbox
-            v-model="addQuotation"
-            label='Add Double Quotation "..." '
-            hide-details
-            @change="quotation"
-          ></v-checkbox>
-          <v-checkbox
-            v-model="addParenthesis"
-            label='Add Parenthesis (...)'
-            hide-details
-            @change="parenthesis"
-          ></v-checkbox>
-        </div>
-      </div>
-      <div class="btn-section pt-10">
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
-        <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField()"> Open All
-              <v-icon left dark class="ml-1">mdi-help</v-icon>
+ <div>
+   <v-alert
+     dismissible
+     color="#0069D9"
+     border="left"
+     elevation="2"
+     colored-border
+   >
+     Entering the search term and clicking  "Enter"  will open Google results in a new tab
+   </v-alert>
+   <div class="custom-container center-center">
+     <div class="text-center">
+       <div class="search-section">
+         <v-text-field
+           v-model="search"
+           placeholder="Enter Search term"
+           outlined
+           color="black darken-2"
+           class="search-field"
+           clearable
+           @keyup.enter="searchField('Google')"
+         >
+         </v-text-field>
+         <div class="checkboxes">
+           <v-checkbox
+             v-model="addQuotation"
+             label='Add Double Quotation "..." '
+             hide-details
+             @change="quotation"
+           ></v-checkbox>
+           <v-checkbox
+             v-model="addParenthesis"
+             label='Add Parenthesis (...)'
+             hide-details
+             @change="parenthesis"
+           ></v-checkbox>
+         </div>
+       </div>
+       <div class="btn-section pt-10">
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
+         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
+           <template v-slot:activator="{ on, attrs }">
+             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="#0069D9" @click="searchField()"> Open All
+               <v-icon left dark class="ml-1">mdi-help</v-icon>
              </v-btn>
-          </template>
-          <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
+           </template>
+           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
-        </v-tooltip>
-      </div>
-      <p class="pt-10 pb-10 mb-0">If you search using a domain name,try those
-        tools for more info about the domain
-      </p>
-      <div class="text-center pb-10">
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">who.js</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
-        <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="primary" @click="searchField('Open_all')">Open All
-              <v-icon left dark class="ml-1">mdi-help</v-icon>
-            </v-btn>
-          </template>
-          <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
+         </v-tooltip>
+       </div>
+       <p class="pt-10 pb-10 mb-0">If you search using a domain name,try those
+         tools for more info about the domain
+       </p>
+       <div class="text-center pb-10">
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">who.js</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
+         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
+           <template v-slot:activator="{ on, attrs }">
+             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="#0069D9" @click="searchField('Open_all')">Open All
+               <v-icon left dark class="ml-1">mdi-help</v-icon>
+             </v-btn>
+           </template>
+           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>        </v-tooltip>
-      </div>
-      <p class="text-gray">We don't store data. There are no ads, bloated dialogs, or useless checkboxes. We built this tool to use it ourselves.</p>
-      <p class="text-gray">  What other sites you'd like to see here? Let us know: Opener@inboxeen.com</p>
-    </div>
-  </div>
+       </div>
+       <p class="text-gray">We don't store data. There are no ads, bloated dialogs, or useless checkboxes. We built this tool to use it ourselves.</p>
+       <p class="text-gray">  What other sites you'd like to see here? Let us know: Resulttree@inboxeen.com</p>
+     </div>
+   </div>
+
+
+
+ </div>
 </template>
 <script>
 export default {
