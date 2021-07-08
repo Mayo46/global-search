@@ -5,7 +5,7 @@
         Entering the search term and clicking  "Enter"  will open Google results in a new tab
       </v-snackbar>
       <div class="search-section">
-        <img class="pb-8 pt-8" src="/ResultTree.png" alt="" />
+        <img class="pb-8 pt-8 img-fluid " src="/ResultTree.png" alt="" />
         <v-text-field
           v-model="search"
           placeholder="Enter Search term"
@@ -169,6 +169,10 @@ export default {
 .center-center {
   display: grid;
   place-items: center;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 .search-section{
   max-width: 630px;

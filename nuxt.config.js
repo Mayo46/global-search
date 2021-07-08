@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Search multiple websites at once. Resulttree helps you to save time and effort! Type the keyword once and search multiple search engines. Search in Google, Facebook, Twitter, Reddit, and many others at once.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/Favicon.jpg' }
     ]
   },
 
