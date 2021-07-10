@@ -8,7 +8,7 @@
         <img class="pb-8 pt-8 img-fluid " src="/ResultTree.png" alt="" />
         <v-text-field
           v-model="search"
-          placeholder="Enter Search term"
+          placeholder="Enter Search Term"
           outlined
           color="black darken-2"
           class="search-field"
@@ -51,7 +51,7 @@
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
         </v-tooltip>
       </div>
-      <p class="pt-8 pb-8 mb-0">If you search using a domain name,try those
+      <p class="pt-8 pb-8 mb-0">If you search using a domain name, try those
         tools for more info about the domain
       </p>
       <div class="text-center pb-8">
