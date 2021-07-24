@@ -1,23 +1,27 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+ server: {
+    port: 3005 // default: 3000
+  },	
+	
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - global-search',
-    title: 'Resulttree | Multiple searches | Search multiple sites | Multiple search engine',
+    titleTemplate: '%s',
+    title: 'Resulttree  | Search multiple sites at once | Multiple search engine',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Search multiple websites at once. Resulttree helps you to save time and effort! Type the keyword once and search multiple search engines. Search in Google, Facebook, Twitter, Reddit, and many others at once.' }
+      { hid: 'description', name: 'description', content: 'Search multiple websites at once with Resulttree! Save time and effort! Type the keyword once and search multiple websites. Search in Google, Youtube, Facebook, Twitter, Amazon, Reddit, and many others at once. Search All!' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/Favicon.jpg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/Favicon.png' }
     ]
   },
 
@@ -26,7 +30,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
+  plugins: ['~/plugins/hotjar','@/plugins/gtag'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,9 +39,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-  ],
-
+    '@nuxtjs/vuetify'	
+ ],
+ 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
