@@ -5,10 +5,10 @@
         Entering the search term and clicking  "Enter"  will open Google results in a new tab
       </v-snackbar>
       <div class="search-section">
-        <img class="pb-8 pt-8 img-fluid " src="/ResultTree.png" alt="" />
+        <img class="pb-8 pt-8 img-fluid " style="margin-bottom:30px" src="/ResultTree.png" alt="" />
         <v-text-field
           v-model="search"
-          placeholder="Enter Search Term"
+          placeholder="Enter your search term"
           outlined
           color="black darken-2"
           class="search-field"
@@ -32,32 +32,34 @@
           ></v-checkbox>
         </div>
       </div>
+      <p class="text-gray" style="padding-top:20px">Enter the search term, then click on your preferred website to show the results. </p>
+      <p class="text-gray">Tip: clicking "Enter" will open Google by default.</p>
       <div class="btn-section pt-8">
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Qoura</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn> 
+	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
+	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
+	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Quora</v-btn> 
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
+	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>	
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="#0069D9" @click="searchField()"> Open All
+			 <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField()">Open All
               <v-icon left dark class="ml-1">mdi-help</v-icon>
-            </v-btn>
+			  </v-btn>
           </template>
           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
         </v-tooltip>
       </div>
-      <p class="pt-8 pb-8 mb-0">If you search using a domain name, try those
-        tools for more info about the domain
+      <p style="display:none" class="pt-8 pb-8 mb-0">If you are searching for a domain address, try these tools for more information about the domain.
       </p>
-      <div class="text-center pb-8">
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">who.js</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
-        <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">alexa</v-btn>
+      <div style="display:none" class="text-center pb-8">
+       <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('SimilarWeb')">SimilarWeb</v-btn>
+	   <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alexa')">Alexa</v-btn>
+	   <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Who')">Who.is</v-btn>
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="#0069D9" @click="searchField('Open_all')">Open All
@@ -67,8 +69,8 @@
           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>        </v-tooltip>
       </div>
-      <p class="text-gray">We don't store data. There are no ads, bloated dialogs, or useless checkboxes. We built this tool to use it ourselves.</p>
-      <p class="text-gray">  What other sites you'd like to see here? Let us know: Resulttree@inboxeen.com</p>
+      <p style="padding-top:50px" class="text-gray">All data processing is done on your browser's end, so we don't store any data.</p>
+      <p class="text-gray">  Are there other sites you'd like to see here? Let us know: Resulttree@inboxeen.com</p>
     </div>
   </div>
 
@@ -83,7 +85,7 @@ export default {
       items:[],
       quote:'"',
       bracket:'(',
-      snackbar: true,
+      snackbar: false,
       timeout: 2000,
     }
   },
@@ -107,7 +109,14 @@ export default {
       }
     },
     searchField(data){
-      if(data==='Google'){
+	  var str = this.search;
+	  str = str.replace(/ +/g, "");
+	  var str1 = this.search;
+	  str1 = str1.replace(/ +/g, "+");
+      if(data==='Amazon'){
+        window.open('https://www.amazon.com/s?k=' + str1)
+      }
+  	  else if(data==='Google'){
         window.open('https://www.google.com/search?q=' + this.search)
       }
       else if (data==='Reddit'){
@@ -123,7 +132,7 @@ export default {
         window.open('https://www.facebook.com/search/?q=' + this.search)
       }
       else if (data==='Instagram'){
-        window.open('https://www.instagram.com/search/?q=' + this.search)
+        window.open('https://www.instagram.com/explore/tags/' + str)
       }
       else if (data==='Youtube'){
         window.open('https://www.youtube.com/search/?q=' + this.search)
@@ -146,12 +155,13 @@ export default {
         window.open('https://www.alexa.com/siteinfo/' + this.search)
       }
       else {
+	    window.open('https://www.amazon.com/s?k=' + str1)
         window.open('https://www.google.com/search?q=' + this.search)
         window.open('https://www.reddit.com/search/?q=' + this.search)
         window.open('https://www.quora.com/search/?q=' + this.search)
         window.open('https://twitter.com/search/?q=' + this.search)
         window.open('https://www.facebook.com/search/?q=' + this.search)
-        window.open('https://www.instagram.com/search/?q=' + this.search)
+        window.open('https://www.instagram.com/explore/tags/' + str)
         window.open('https://www.youtube.com/search/?q=' + this.search)
         window.open('http://socialmention.com/search?q=' + this.search)
       }
@@ -199,5 +209,8 @@ export default {
   }
 .v-tooltip__content {
   pointer-events: initial;
+}
+.theme--light.v-btn {
+	color: #fff;
 }
 </style>
