@@ -32,18 +32,18 @@
           ></v-checkbox>
         </div>
       </div>
-      <p class="text-gray" style="padding-top:20px">Enter the search term, then click on your preferred website to show the results. </p>
+      <p class="text-gray pt-5">Enter the search term, then click on your preferred website to show the results. </p>
       <p class="text-gray">Tip: clicking "Enter" will open Google by default.</p>
       <div class="btn-section pt-8">
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
-         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn> 
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
-         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Quora</v-btn> 
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Quora</v-btn>
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
-	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>	
+	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
 			 <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField()">Open All
@@ -53,6 +53,65 @@
           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
         </v-tooltip>
+      </div>
+      <v-switch
+        v-model="switchBtn"
+        label="Show More"
+        color="primary"
+      ></v-switch>
+      <div v-show="switchBtn">
+        <!-- Search Engine -->
+        <div class="btn-section ">
+          <p class="text-gray">Search Engine</p>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Bing')">Bing</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yahoo')">Yahoo</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('DuckDuckGo')">DuckDuckGo</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Baidu')">Baidu</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yandex')">Yandex</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('InternetArchive')">Internet Archive</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('searchEngine')">Open All</v-btn>
+        </div>
+        <!-- Social Media -->
+        <div class="btn-section pt-4">
+          <p class="text-gray">Social Media</p>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twitter')">Twitter</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Linkedin')">Linkedin</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Pinterest')">Pinterest</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Socialmention')">Social Mention</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Tiktok')">Tiktok</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialMedia')">Open All</v-btn>
+        </div>
+        <!-- Shopping -->
+        <div class="btn-section pt-4">
+          <p class="text-gray">Shopping</p>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('eBay')">eBay</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Wallmart')">Wallmart</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Homedepot')">Homedepot</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Etsy')">Etsy</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Aliexpress')">Ali Express</v-btn>-->
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alibaba')">Ali Baba</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Taobao')">Taobao</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Shopping')">Open All</v-btn>
+        </div>
+        <!-- Others -->
+        <div class="btn-section pt-4">
+          <p class="text-gray">Others</p>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Wikipedia')">Wikipedia</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yelp')">Yelp</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Quora')">Quora</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('IMBD')">IMBD</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Rottentomatoes')">Rottentomatoes</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Fandom')">Fandom</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Allrecipes')">Allrecipes</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Craigslist')">Craigslist</v-btn>
+<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Others')">Open All</v-btn>-->
+        </div>
       </div>
       <p style="display:none" class="pt-8 pb-8 mb-0">If you are searching for a domain address, try these tools for more information about the domain.
       </p>
@@ -87,6 +146,7 @@ export default {
       bracket:'(',
       snackbar: false,
       timeout: 2000,
+      switchBtn: true,
     }
   },
   methods:{
@@ -109,22 +169,15 @@ export default {
       }
     },
     searchField(data){
-	  var str = this.search;
-	  str = str.replace(/ +/g, "");
-	  var str1 = this.search;
-	  str1 = str1.replace(/ +/g, "+");
+	  const  instaString= this.search.replace(/ +/g, "");
+	  const  amazonString= this.search.replace(/ +/g, "+");
       if(data==='Amazon'){
-        window.open('https://www.amazon.com/s?k=' + str1)
+        window.open('https://www.amazon.com/s?k=' + amazonString)
       }
   	  else if(data==='Google'){
         window.open('https://www.google.com/search?q=' + this.search)
       }
-      else if (data==='Reddit'){
-        window.open('https://www.reddit.com/search/?q=' + this.search)
-      }
-      else if (data==='Qoura'){
-        window.open('https://www.quora.com/search/?q=' + this.search)
-      }
+
       else if (data==='Twiter'){
         window.open('https://twitter.com/search/?q=' + this.search)
       }
@@ -132,7 +185,7 @@ export default {
         window.open('https://www.facebook.com/search/?q=' + this.search)
       }
       else if (data==='Instagram'){
-        window.open('https://www.instagram.com/explore/tags/' + str)
+        window.open('https://www.instagram.com/explore/tags/' + instaString)
       }
       else if (data==='Youtube'){
         window.open('https://www.youtube.com/search/?q=' + this.search)
@@ -154,14 +207,118 @@ export default {
         window.open('https://www.similarweb.com/website/' + this.search)
         window.open('https://www.alexa.com/siteinfo/' + this.search)
       }
+      else if (data==='Bing'){
+        window.open('https://www.bing.com/search?q=' + this.search)
+      }
+      else if (data==='Yahoo'){
+        window.open('https://search.yahoo.com/search?p=' + this.search)
+      }
+      else if (data==='DuckDuckGo'){
+        window.open('https://duckduckgo.com/?q=' + this.search)
+      }
+      else if (data==='Baidu'){
+        // window.open('https://baidu.com/?q=' + this.search)
+      }
+      else if (data==='Yandex'){
+        window.open('https://yandex.com/search/?text=' + this.search)
+      }
+      else if (data==='InternetArchive'){
+        window.open('https://web.archive.org/web/*/' + this.search)
+      }
+      else if (data==='searchEngine'){
+        window.open('https://www.google.com/search?q=' + this.search)
+        window.open('https://www.bing.com/search?q=' + this.search)
+        window.open('https://search.yahoo.com/search?p=' + this.search)
+        window.open('https://duckduckgo.com/?q=' + this.search)
+
+        // window.open('https://baidu.com/?q=' + this.search)
+
+        window.open('https://yandex.com/search/?text=' + this.search)
+        window.open('https://web.archive.org/web/*/' + this.search)
+      }
+      else if (data==='Linkedin'){
+        window.open('https://www.linkedin.com/in/' + this.search)
+      }
+      else if (data==='Pinterest'){
+        window.open('https://www.pinterest.com/search/pins/?q=' + this.search)
+      }
+      else if (data==='Tiktok'){
+        // window.open('https://www.pinterest.com/search/pins/?q=' + this.search)
+      }
+      else if (data==='socialMedia'){
+        window.open('https://www.facebook.com/search/?q=' + this.search)
+        window.open('https://twitter.com/search/?q=' + this.search)
+        window.open('https://www.instagram.com/explore/tags/' + instaString)
+        window.open('https://www.linkedin.com/in/' + this.search)
+        window.open('https://www.pinterest.com/search/pins/?q=' + this.search)
+        window.open('http://socialmention.com/search?q=' + this.search)
+
+
+
+      }
+      else if (data==='eBay'){
+        // window.open('https://www.etsy.com/search?q=' + this.search)
+      }
+      else if (data==='Wallmart'){
+        window.open('https://www.walmart.com/search?query=' + this.search)
+      }
+      else if (data==='Homedepot'){
+        // window.open('https://www.walmart.com/search?query=' + this.search)
+      }
+      else if (data==='Etsy'){
+        window.open('https://www.etsy.com/search?q=' + this.search)
+      }
+      else if (data==='Aliexpress'){
+        // window.open('https://www.etsy.com/search?q=' + this.search)
+      }
+      else if (data==='Alibaba'){
+        // window.open('https://www.etsy.com/search?q=' + this.search)
+      }
+      else if (data==='Taobao'){
+        window.open('https://s.taobao.com/search/?q=' + this.search)
+      }
+      else if (data==='Shopping'){
+        window.open('https://www.amazon.com/s?k=' + amazonString)
+        window.open('https://www.walmart.com/search?query=' + this.search)
+        window.open('https://www.etsy.com/search?q=' + this.search)
+        window.open('https://s.taobao.com/search/?q=' + this.search)
+      }
+      else if (data==='Wikipedia'){
+        window.open('https://en.wikipedia.org/wiki/' + this.search)
+      }
+      else if (data==='Yelp'){
+        window.open('https://www.yelp.com/search?find_desc=' + this.search)
+      }
+      else if (data==='Reddit'){
+        window.open('https://www.reddit.com/search/?q=' + this.search)
+      }
+      else if (data==='Qoura'){
+        window.open('https://www.quora.com/search/?q=' + this.search)
+      }
+      else if (data==='IMBD'){
+        window.open('https://www.imdb.com/find?q=' + this.search)
+      }
+      else if (data==='Rottentomatoes'){
+        window.open('https://www.rottentomatoes.com/search?search=' + this.search)
+      }
+      else if (data==='Fandom'){
+        window.open('https://www.fandom.com/?s=' + this.search)
+      }
+      else if (data==='Allrecipes'){
+        window.open('https://www.allrecipes.com/search/results/?search=' + this.search)
+      }
+      else if (data==='Craigslist'){
+        window.open('https://chandigarh.craigslist.org/d/housing/search/hhh?query=' + this.search)
+      }
+
       else {
-	    window.open('https://www.amazon.com/s?k=' + str1)
+	    window.open('https://www.amazon.com/s?k=' + amazonString)
         window.open('https://www.google.com/search?q=' + this.search)
         window.open('https://www.reddit.com/search/?q=' + this.search)
         window.open('https://www.quora.com/search/?q=' + this.search)
         window.open('https://twitter.com/search/?q=' + this.search)
         window.open('https://www.facebook.com/search/?q=' + this.search)
-        window.open('https://www.instagram.com/explore/tags/' + str)
+        window.open('https://www.instagram.com/explore/tags/' + instaString)
         window.open('https://www.youtube.com/search/?q=' + this.search)
         window.open('http://socialmention.com/search?q=' + this.search)
       }

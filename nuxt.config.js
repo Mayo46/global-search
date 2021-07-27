@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
  server: {
     port: 3005 // default: 3000
-  },	
-	
+  },
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -39,9 +39,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'	
+    '@nuxtjs/vuetify'
  ],
- 
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
