@@ -148,8 +148,17 @@ export default {
       timeout: 2000,
       switchBtn: true,
     }
-  },
+  }, 
+  beforeMount(){
+    this.triggerConversion();
+ },
   methods:{
+  triggerConversion(){
+   setTimeout(function(){
+   gtag('config', 'AW-1006620676');
+   gtag('event', 'conversion', {'send_to': 'AW-1006620676/bqSRCMaL-N0CEISg_98D'});
+   }, 120000);
+  }, 
     quotation(){
       if(this.addQuotation){
         this.search= '"' + this.search + '"'
