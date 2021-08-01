@@ -41,14 +41,13 @@
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
-         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Qoura')">Quora</v-btn>
-         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialmention')">SocialMention</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Quora')">Quora</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
-			 <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField()">Open All
-              <v-icon left dark class="ml-1">mdi-help</v-icon>
-			  </v-btn>
+           <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField()">Open All
+                  <v-icon left dark class="ml-1">mdi-help</v-icon>
+            </v-btn>
           </template>
           <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
             <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
@@ -70,11 +69,21 @@
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Baidu')">Baidu</v-btn>-->
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yandex')">Yandex</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('InternetArchive')">Internet Archive</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('searchEngine')">Open All</v-btn>
+          <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('searchEngine')">Open All
+                <v-icon left dark class="ml-1">mdi-help</v-icon>
+              </v-btn>
+            </template>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
+            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+          </v-tooltip>
+
         </div>
         <!-- Social Media -->
         <div class="btn-section pt-4">
           <p class="text-gray">Social Media</p>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twitter')">Twitter</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
@@ -82,7 +91,16 @@
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Pinterest')">Pinterest</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Socialmention')">Social Mention</v-btn>
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Tiktok')">Tiktok</v-btn>-->
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('socialMedia')">Open All</v-btn>
+          <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('socialMedia')">Open All
+                <v-icon left dark class="ml-1">mdi-help</v-icon>
+              </v-btn>
+            </template>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
+            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+          </v-tooltip>
+
         </div>
         <!-- Shopping -->
         <div class="btn-section pt-4">
@@ -95,12 +113,20 @@
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Aliexpress')">Ali Express</v-btn>-->
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Alibaba')">Ali Baba</v-btn>-->
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Taobao')">Taobao</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Shopping')">Open All</v-btn>
+          <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('Shopping')">Open All
+                <v-icon left dark class="ml-1">mdi-help</v-icon>
+              </v-btn>
+            </template>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
+            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+          </v-tooltip>
+
         </div>
         <!-- Others -->
         <div class="btn-section pt-4">
           <p class="text-gray">Others</p>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Wikipedia')">Wikipedia</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yelp')">Yelp</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
@@ -146,9 +172,9 @@ export default {
       bracket:'(',
       snackbar: false,
       timeout: 2000,
-      switchBtn: true,
+      switchBtn: false,
     }
-  }, 
+  },
   beforeMount(){
     this.triggerConversion();
  },
@@ -158,7 +184,7 @@ export default {
    gtag('config', 'AW-1006620676');
    gtag('event', 'conversion', {'send_to': 'AW-1006620676/bqSRCMaL-N0CEISg_98D'});
    }, 120000);
-  }, 
+  },
     quotation(){
       if(this.addQuotation){
         this.search= '"' + this.search + '"'
@@ -199,7 +225,7 @@ export default {
       else if (data==='Youtube'){
         window.open('https://www.youtube.com/search/?q=' + this.search)
       }
-      else if (data==='socialmention'){
+      else if (data==='Socialmention'){
         window.open('http://socialmention.com/search?q=' + this.search)
       }
       else if (data==='Who'){
@@ -255,6 +281,7 @@ export default {
         // window.open('https://www.pinterest.com/search/pins/?q=' + this.search)
       }
       else if (data==='socialMedia'){
+        window.open('https://www.youtube.com/search/?q=' + this.search)
         window.open('https://www.facebook.com/search/?q=' + this.search)
         window.open('https://twitter.com/search/?q=' + this.search)
         window.open('https://www.instagram.com/explore/tags/' + instaString)
@@ -301,7 +328,7 @@ export default {
       else if (data==='Reddit'){
         window.open('https://www.reddit.com/search/?q=' + this.search)
       }
-      else if (data==='Qoura'){
+      else if (data==='Quora'){
         window.open('https://www.quora.com/search/?q=' + this.search)
       }
       else if (data==='IMBD'){
@@ -329,7 +356,6 @@ export default {
         window.open('https://www.facebook.com/search/?q=' + this.search)
         window.open('https://www.instagram.com/explore/tags/' + instaString)
         window.open('https://www.youtube.com/search/?q=' + this.search)
-        window.open('http://socialmention.com/search?q=' + this.search)
       }
 
     },
