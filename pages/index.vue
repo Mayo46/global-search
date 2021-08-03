@@ -85,7 +85,7 @@
           <p class="text-gray">Social Media</p>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twitter')">Twitter</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Linkedin')">Linkedin</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Pinterest')">Pinterest</v-btn>
