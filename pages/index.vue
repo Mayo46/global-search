@@ -66,7 +66,7 @@
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Bing')">Bing</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yahoo')">Yahoo</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('DuckDuckGo')">DuckDuckGo</v-btn>
-<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Baidu')">Baidu</v-btn>-->
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Baidu')">Baidu</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yandex')">Yandex</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('InternetArchive')">Internet Archive</v-btn>
           <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
@@ -252,7 +252,7 @@ export default {
         window.open('https://duckduckgo.com/?q=' + this.search)
       }
       else if (data==='Baidu'){
-        // window.open('https://baidu.com/?q=' + this.search)
+        window.open('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=' + this.search)
       }
       else if (data==='Yandex'){
         window.open('https://yandex.com/search/?text=' + this.search)
@@ -265,8 +265,7 @@ export default {
         window.open('https://www.bing.com/search?q=' + this.search)
         window.open('https://search.yahoo.com/search?p=' + this.search)
         window.open('https://duckduckgo.com/?q=' + this.search)
-
-        // window.open('https://baidu.com/?q=' + this.search)
+        window.open('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=' + this.search)
 
         window.open('https://yandex.com/search/?text=' + this.search)
         window.open('https://web.archive.org/web/*/' + this.search)
