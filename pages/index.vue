@@ -5,7 +5,7 @@
         Entering the search term and clicking  "Enter"  will open Google results in a new tab
       </v-snackbar>
       <div class="search-section">
-        <img class="pb-8 pt-8 img-fluid " style="margin-bottom:30px" src="/ResultTree.png" alt="" />
+        <img class="pb-8 pt-8 img-fluid mb-7"  src="/ResultTree.png" alt="" />
         <v-text-field
           v-model="search"
           placeholder="Enter your search term"
@@ -49,8 +49,8 @@
                   <v-icon left dark class="ml-1">mdi-help</v-icon>
             </v-btn>
           </template>
-          <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
-            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+          <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
+            <a href="https://www.youtube.com/watch?v=nUDbM_ypGRg" target="_blank" style="cursor: pointer">See this video: </a></span>
         </v-tooltip>
       </div>
       <v-switch
@@ -75,8 +75,8 @@
                 <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
-            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
-            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
+            <a href="https://www.youtube.com/watch?v=nUDbM_ypGRg" target="_blank" style="cursor: pointer">See this video: </a></span>
           </v-tooltip>
 
         </div>
@@ -97,8 +97,8 @@
                 <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
-            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
-            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
+            <a href="https://www.youtube.com/watch?v=nUDbM_ypGRg" target="_blank" style="cursor: pointer">See this video: </a></span>
           </v-tooltip>
 
         </div>
@@ -106,8 +106,8 @@
         <div class="btn-section pt-4">
           <p class="text-gray">Shopping</p>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>
-<!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('eBay')">eBay</v-btn>-->
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Wallmart')">Wallmart</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('eBay')">eBay</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Walmart')">Walmart</v-btn>
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Homedepot')">Homedepot</v-btn>-->
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Etsy')">Etsy</v-btn>
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Aliexpress')">Ali Express</v-btn>-->
@@ -119,8 +119,8 @@
                 <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
-            <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
-            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>
+            <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
+            <a href="https://www.youtube.com/watch?v=nUDbM_ypGRg" target="_blank" style="cursor: pointer">See this video: </a></span>
           </v-tooltip>
 
         </div>
@@ -151,11 +151,16 @@
               <v-icon left dark class="ml-1">mdi-help</v-icon>
             </v-btn>
           </template>
-          <span>If you want to use the “Open All” function,  you need to enable opening multiple pages in your browser.
-            <a href="https://bit.ly/2TfpLSQ" target="_blank" style="cursor: pointer">See this video: </a></span>        </v-tooltip>
+          <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
+            <a href="https://www.youtube.com/watch?v=nUDbM_ypGRg" target="_blank" style="cursor: pointer">See this video: </a></span>        </v-tooltip>
       </div>
       <p style="padding-top:50px" class="text-gray">All data processing is done on your browser's end, so we don't store any data.</p>
       <p class="text-gray">  Are there other sites you'd like to see here? Let us know: Resulttree@inboxeen.com</p>
+      <div @click="openProductHunt" style="cursor: pointer">
+        <img class="pb-8 pt-8 img-fluid "  src="/top-post-badge.svg" alt="" />
+      </div>
+
+
     </div>
   </div>
 
@@ -292,9 +297,9 @@ export default {
 
       }
       else if (data==='eBay'){
-        // window.open('https://www.etsy.com/search?q=' + this.search)
+        window.open('https://www.ebay.com/sch/i.html?_from=R40&_nkw=' + this.search)
       }
-      else if (data==='Wallmart'){
+      else if (data==='Walmart'){
         window.open('https://www.walmart.com/search?query=' + this.search)
       }
       else if (data==='Homedepot'){
@@ -314,6 +319,7 @@ export default {
       }
       else if (data==='Shopping'){
         window.open('https://www.amazon.com/s?k=' + amazonString)
+        window.open('https://www.ebay.com/sch/i.html?_from=R40&_nkw=' + this.search)
         window.open('https://www.walmart.com/search?query=' + this.search)
         window.open('https://www.etsy.com/search?q=' + this.search)
         window.open('https://s.taobao.com/search/?q=' + this.search)
@@ -358,6 +364,9 @@ export default {
       }
 
     },
+    openProductHunt(){
+      window.open('https://www.producthunt.com/posts/result-tree')
+    }
   }
 }
 </script>
