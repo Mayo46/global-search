@@ -11,14 +11,14 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'Resulttree  | Search multiple sites at once | Multiple search engine',
+    title: 'Resulttree | Search Multiple Sites at Once | Result Tree Multiple Search Engine',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Search multiple websites at once with Resulttree! Save time and effort! Type the keyword once and search multiple websites. Search in Google, Youtube, Facebook, Twitter, Amazon, Reddit, and many others at once. Search All!' }
+      { hid: 'description', name: 'description', content: 'Search multiple websites at once with Result Tree! Save time and effort! Type the keyword once and search multiple websites. Search on Google, YouTube, Facebook, Twitter, Amazon, Reddit, and many others in one go. Search it all!' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/Favicon.png' }

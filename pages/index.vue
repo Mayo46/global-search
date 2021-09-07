@@ -5,7 +5,7 @@
         Entering the search term and clicking  "Enter"  will open Google results in a new tab
       </v-snackbar>
       <div class="search-section">
-        <img class="pb-8 pt-8 img-fluid mb-7"  src="/ResultTree.png" alt="" />
+        <img class="pb-8 pt-8 img-fluid mb-7"  src="/resulttree.png" alt="" />
         <v-text-field
           v-model="search"
           placeholder="Enter your search term"
@@ -33,10 +33,10 @@
         </div>
       </div>
       <p class="text-gray pt-5">Enter the search term, then click on your preferred website to show the results. </p>
-      <p class="text-gray">Tip: clicking "Enter" will open Google by default.</p>
+      <p class="text-gray">Tip: Clicking "Enter" will open Google by default.</p>
       <div class="btn-section pt-8">
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
-         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+         <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">YouTube</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
 	     <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
@@ -61,13 +61,13 @@
       <div v-show="switchBtn">
         <!-- Search Engine -->
         <div class="btn-section ">
-          <p class="text-gray">Search Engine</p>
+          <p class="text-gray">Search Engines</p>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Google')">Google</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Bing')">Bing</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yahoo')">Yahoo</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yahoo')">Yahoo!</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('DuckDuckGo')">DuckDuckGo</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Baidu')">Baidu</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yandex')">Yandex</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Yandex')">Yande</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('InternetArchive')">Internet Archive</v-btn>
           <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
             <template v-slot:activator="{ on, attrs }">
@@ -83,11 +83,11 @@
         <!-- Social Media -->
         <div class="btn-section pt-4">
           <p class="text-gray">Social Media</p>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">Youtube</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Youtube')">YouTube</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Facebook')">Facebook</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Twiter')">Twitter</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Instagram')">Instagram</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Linkedin')">Linkedin</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Linkedin')">LinkedIn</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Pinterest')">Pinterest</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Socialmention')">Social Mention</v-btn>
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Tiktok')">Tiktok</v-btn>-->
@@ -106,7 +106,7 @@
         <div class="btn-section pt-4">
           <p class="text-gray">Shopping</p>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Amazon')">Amazon</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('eBay')">eBay</v-btn>
+          <v-btn class="mr-2 mb-2" style="text-transform: inherit;" outlined color="black" @click="searchField('eBay')">eBay</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Walmart')">Walmart</v-btn>
 <!--          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Homedepot')">Homedepot</v-btn>-->
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Etsy')">Etsy</v-btn>
@@ -132,7 +132,7 @@
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Reddit')">Reddit</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Quora')">Quora</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('IMBD')">IMBD</v-btn>
-          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Rottentomatoes')">Rottentomatoes</v-btn>
+          <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Rottentomatoes')">Rotten Tomatoes</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Fandom')">Fandom</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Allrecipes')">Allrecipes</v-btn>
           <v-btn class="mr-2 mb-2 lower-case" outlined color="black" @click="searchField('Craigslist')">Craigslist</v-btn>
