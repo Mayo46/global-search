@@ -46,7 +46,6 @@
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
            <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField()">Open All
-                  <v-icon left dark class="ml-1">mdi-help</v-icon>
             </v-btn>
           </template>
           <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
@@ -72,7 +71,6 @@
           <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
             <template v-slot:activator="{ on, attrs }">
               <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('searchEngine')">Open All
-                <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
             <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
@@ -94,7 +92,6 @@
           <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
             <template v-slot:activator="{ on, attrs }">
               <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('socialMedia')">Open All
-                <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
             <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
@@ -116,7 +113,6 @@
           <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
             <template v-slot:activator="{ on, attrs }">
               <v-btn class="mr-2 mb-2 lower-case" v-bind="attrs" v-on="on" outlined color="black" @click="searchField('Shopping')">Open All
-                <v-icon left dark class="ml-1">mdi-help</v-icon>
               </v-btn>
             </template>
             <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
@@ -148,7 +144,6 @@
         <v-tooltip bottom close-delay="2000" max-width="300" color="black" >
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="mb-2 lower-case" v-bind="attrs" v-on="on" rounded color="#0069D9" @click="searchField('Open_all')">Open All
-              <v-icon left dark class="ml-1">mdi-help</v-icon>
             </v-btn>
           </template>
           <span>If you want to use the “Open All” function,  you need to enable opening multiple tabs in your browser.
