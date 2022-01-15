@@ -2,6 +2,18 @@
 
 ## Build Setup
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-208155997-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-208155997-17');
+</script>
+
+
+
 ```bash
 # install dependencies
 $ npm install
