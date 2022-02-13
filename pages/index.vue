@@ -20,7 +20,7 @@
         <div class="checkboxes">
           <v-checkbox
             v-model="addQuotation"
-            label='Add Double Quotation "..." '
+            label='Exact Match "..."'
             hide-details
             @change="quotation"
           ></v-checkbox>
